@@ -1,0 +1,75 @@
+﻿<br />
+<br />
+<br />
+
+<h2>Please fill the form to register!</h2>
+
+
+
+
+<form>
+    <br />
+    <br />
+    First Name: <input type="text" id="FirstName" name="FirstName" /><br />
+    Last Name: <input type="text" id="LastName" name="LastName" /><br />
+    Email: <input type="email" id="Email" name="email" pattern="^([\w\.\-]+)\@('@')([\w\-]{2,}?)((\.(\w){2,3})+)$" /><br />
+    Password: <input type="password" id="Password" minlength="8" maxlength="30" name="password" required /><br />
+    Phone: <input type="text" id="Phone" name="Phone"><asp:TextBox ID="TxtNo" runat="server"></asp:TextBox>
+    <asp:RegularExpressionValidator ID="RegularExpressionValidator2"
+                                    runat="server" ErrorMessage="Enter valid Phone number"
+                                    ControlToValidate="TxtNo"
+                                    ValidationExpression="^([0-9\(\)\/\+ \-]*)$"></asp:RegularExpressionValidator></form>
+    
+    <form>
+        <fieldset>
+            <legend>Choose your favorite Star Wars character</legend>
+
+            <input type="radio" id="Han Solo" name="character">
+            <label for="Han Solo">Han Solo</label><br />
+
+            <input type="radio" id="Boba Fett" name="character">
+            <label for="Boba Fett">Boba Fett</label><br />
+
+            <input type="radio" id="Princess Leia" name="character">
+            <label for="Princess Leia">Princess Leia</label><br />
+
+            <input type="radio" id="Chewie" name="character">
+            <label for="Chewie">Chewie</label><br />
+
+            <input type="radio" id="Luke Skywalker" name="character">
+            <label for="Luke Skywalker">Luke Skywalker</label><br />
+
+            <input type="radio" id="Lumpy" name="character">
+            <label for="Lumpy">Lumpy</label><br />
+
+
+            <br />
+            <br />
+        </fieldset>
+    </form>
+
+
+    <form action="Welcome" method="post">    //password part must be post
+        <fieldset>
+            <legend>Choose your weapon</legend>
+
+            <input type="radio" name="weapon" id="Lightsaber" />
+            <label for="Lightsaber">Lightsaber</label><br />
+
+            <input type="radio" name="weapon" id="Blaster" />
+            <label for="Blaster">Blaster</label><br />
+
+            <input type="radio" name="weapon" id="Thermal Detonator" />
+            <label for="Thermal Detonator">Thermal Detonator</label><br />
+
+            <input type="radio" name="weapon" id="Gaffi Stick" />
+            <label for="Gaffi Stick">Gaffi Stick</label><br />
+
+            <input type="radio" name="weapon" id="Proton Torpedo" />
+            <label for="Proton Torpedo">Proton Torpedo</label><br />
+            <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
+
+    
+
